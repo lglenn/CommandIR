@@ -1,4 +1,23 @@
-LIRCFILES=lirc/appletv-lircd.conf lirc/commandir-lircd.conf lirc/hardware.conf lirc/lircd.conf lirc/lircmd.conf lirc/monoprice_hdmi_switch-lircd.conf
+LIRCFILES=appletv-lircd.conf commandir-lircd.conf hardware.conf lircd.conf lircmd.conf monoprice_hdmi_switch-lircd.conf
+SCRIPTS=command_send.sh from_appletv.sh to_appletv.sh
+SCRIPT_DIR=/usr/local/bin
+LIRCRC_DIR=/home/larry/.lirc
+MYTHDIR=/usr/share/mythtv
+LIRC_CONF_DIR=/etc/lirc
 
-all:
-	cp $(LIRCFILES) /etc/lirc;
+.PHONY: lirc lircrc scripts mythtv
+
+install: lirc lircrc scripts mythtv
+
+lirc:
+	cd lirc && cp $(LIRCFILES) $(LIRC_CONF_DIR);
+
+lircrc:
+	cd lircrc && cp appletv $(LIRCRC_DIR);
+
+scripts:
+	cd scripts && cp $(SCRIPTS) $(SCRIPT_DIR);
+	cd $(SCRIPT_DIR) && chmod 755 $(SCRIPTS);
+
+mythtv:
+	cd mythtv && cp mainmenu.xml $(MYTHDIR)/themes/mediacentermenu;
