@@ -1,5 +1,5 @@
 LIRCFILES=appletv-lircd.conf commandir-lircd.conf hardware.conf lircd.conf lircmd.conf monoprice_hdmi_switch-lircd.conf
-SCRIPTS=command_send.sh from_appletv.sh to_appletv.sh
+SCRIPTS=command_send.sh from_appletv.sh to_appletv.sh hdmi_switch.sh appletv.sh
 SCRIPT_DIR=/usr/local/bin
 LIRCRC_DIR=/home/larry/.lirc
 MYTHDIR=/usr/share/mythtv
