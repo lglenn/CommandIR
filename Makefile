@@ -13,7 +13,7 @@ lirc:
 	cd lirc && cp $(LIRCFILES) $(LIRC_CONF_DIR);
 
 lircrc:
-	cd lircrc && cp appletv $(LIRCRC_DIR);
+	cd lircrc && cp mythtv $(LIRCRC_DIR);
 
 scripts:
 	cd scripts && cp $(SCRIPTS) $(SCRIPT_DIR);

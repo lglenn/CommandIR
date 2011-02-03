@@ -11,4 +11,3 @@ irsend send_once Apple_A1294 MENU
 irsend send_once commandir settransmitters-1
 irsend send_once monoprice_hdmi_switch BTN_3
 
-killall irexec

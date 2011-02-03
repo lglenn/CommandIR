@@ -4,4 +4,3 @@
 
 irsend send_once commandir settransmitters-1
 irsend send_once monoprice_hdmi_switch BTN_2
-irexec /home/larry/.lirc/appletv
