@@ -6,7 +6,7 @@ LIRCRC_DIR=/home/larry/.lirc
 MYTHDIR=/usr/share/mythtv
 LIRC_CONF_DIR=/etc/lirc
 
-.PHONY: lirc lircrc scripts mythtv
+.PHONY: lirc lircrc scripts mythtv init.d
 
 install: lirc lircrc scripts mythtv
 
@@ -22,3 +22,6 @@ scripts:
 
 mythtv:
 	cd mythtv && cp mainmenu.xml $(MYTHDIR)/themes/mediacentermenu;
+
+init.d:
+	cd init.d && cp lirc /etc/init.d

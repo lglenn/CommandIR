@@ -218,7 +218,7 @@ case "$1" in
 
 		if [ "$START_LIRCD" = "true" ]; then
 			log_daemon_msg "Stopping remote control daemon(s): LIRC"
-			start-stop-daemon --stop --quiet --exec /usr/sbin/lircd
+			start-stop-daemon --stop --quiet --signal 9 --exec /usr/sbin/lircd
 			log_end_msg $?
 			[ -h "$OLD_SOCKET" ] && rm -f $OLD_SOCKET
 			[ -h "${OLD_SOCKET}1" ] && rm -f ${OLD_SOCKET}1
