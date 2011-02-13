@@ -8,7 +8,7 @@ begin
  remote = hauppauge_350
  button = Play
  repeat = 0
- config = /usr/local/bin/command_send.sh 3 Apple_A1294 PLAY
+ config = commandir_send -e3 /home/larry/ir_codes/appletv_play
 end
 
 begin
@@ -16,7 +16,7 @@ begin
  remote = hauppauge_350
  button = Menu/i
  repeat = 0
- config = /usr/local/bin/command_send.sh 3 Apple_A1294 MENU
+ config = commandir_send -e3 /home/larry/ir_codes/appletv_menu
 end
 
 begin
@@ -24,7 +24,7 @@ begin
  remote = hauppauge_350
  button = OK
  repeat = 0
- config = /usr/local/bin/command_send.sh 3 Apple_A1294 OK
+ config = commandir_send -e3 /home/larry/ir_codes/appletv_ok
 end
 
 begin
@@ -32,7 +32,7 @@ begin
  remote = hauppauge_350
  button = Up
  repeat = 0
- config = /usr/local/bin/command_send.sh 3 Apple_A1294 UP
+ config = commandir_send -e3 /home/larry/ir_codes/appletv_up
 end
 
 begin
@@ -40,7 +40,7 @@ begin
  remote = hauppauge_350
  button = Down
  repeat = 0
- config = /usr/local/bin/command_send.sh 3 Apple_A1294 DOWN
+ config = commandir_send -e3 /home/larry/ir_codes/appletv_down
 end
 
 begin
@@ -48,7 +48,7 @@ begin
  remote = hauppauge_350
  button = Left
  repeat = 0
- config = /usr/local/bin/command_send.sh 3 Apple_A1294 LEFT
+ config = commandir_send -e3 /home/larry/ir_codes/appletv_left
 end
 
 begin
@@ -56,7 +56,7 @@ begin
  remote = hauppauge_350
  button = Right
  repeat = 0
- config = /usr/local/bin/command_send.sh 3 Apple_A1294 RIGHT
+ config = commandir_send -e3 /home/larry/ir_codes/appletv_right
 end
 
 # Get back to the main menu
