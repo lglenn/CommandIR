@@ -1,6 +1,6 @@
 LIRCFILES=hardware.conf lircd.conf lircmd.conf
 LIRCRCFILES=appletv mythtv
-SCRIPTS=command_send.sh from_appletv.sh to_appletv.sh hdmi_switch.sh appletv.sh
+SCRIPTS=from_appletv.sh to_appletv.sh
 SCRIPT_DIR=/usr/local/bin
 LIRCRC_DIR=/home/larry/.lirc
 MYTHDIR=/usr/share/mythtv
