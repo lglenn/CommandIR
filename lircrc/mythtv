@@ -100,24 +100,6 @@ end
 begin
     remote = Hauppauge_350
     prog = mythtv
-    button = Vol+
-    config = ]
-    repeat = 0
-    delay = 0
-end
-
-begin
-    remote = Hauppauge_350
-    prog = mythtv
-    button = Vol-
-    config = [
-    repeat = 0
-    delay = 0
-end
-
-begin
-    remote = Hauppauge_350
-    prog = mythtv
     button = Mute
     config = |
     repeat = 0
@@ -323,12 +305,19 @@ begin
 end
 
 begin
-    remote = Hauppauge_350
-    prog = mythtv
-    button = Red
-    config = "
-    repeat = 0
-    delay = 0
+ prog = irexec
+ remote = hauppauge_350
+ button = Vol+
+ repeat = 0
+ config = /usr/local/bin/to_appletv.sh
+end
+
+begin
+ prog = irexec
+ remote = hauppauge_350
+ button = Vol-
+ repeat = 0
+ config = /usr/local/bin/from_appletv.sh
 end
 
 begin
