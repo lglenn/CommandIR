@@ -1,0 +1,35 @@
+#!/bin/bash
+
+CODES_DIR=/home/larry/ir_codes;
+
+push_button () {
+    commandir_send -e3 $CODES_DIR/appletv_$1;
+}
+
+case "$1" in
+    play)
+	push_button "play";
+	;;
+    menu)
+	push_button "menu";
+	;;
+    ok)
+	push_button "ok";
+	;;
+    up)
+	push_button "up";	
+	;;
+    down)
+	push_button "down";
+	;;
+    left)
+	push_button "left";
+	;;
+    right)
+	push_button "right";
+	;;
+    *)
+	echo "Unsupported command '$1'!";
+	exit 1;
+	;;
+esac;

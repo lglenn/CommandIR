@@ -8,7 +8,7 @@ begin
  remote = hauppauge_350
  button = Play
  repeat = 0
- config = commandir_send -e3 /home/larry/ir_codes/appletv_play
+ config = appletv play;
 end
 
 begin
@@ -16,7 +16,15 @@ begin
  remote = hauppauge_350
  button = Menu/i
  repeat = 0
- config = commandir_send -e3 /home/larry/ir_codes/appletv_menu
+ config = appletv menu;
+end
+
+begin
+ prog = irexec
+ remote = hauppauge_350
+ button = Back/Exit
+ repeat = 0
+ config = appletv menu;
 end
 
 begin
@@ -24,7 +32,7 @@ begin
  remote = hauppauge_350
  button = OK
  repeat = 0
- config = commandir_send -e3 /home/larry/ir_codes/appletv_ok
+ config = appletv ok;
 end
 
 begin
@@ -32,7 +40,7 @@ begin
  remote = hauppauge_350
  button = Up
  repeat = 0
- config = commandir_send -e3 /home/larry/ir_codes/appletv_up
+ config = appletv up;
 end
 
 begin
@@ -40,7 +48,7 @@ begin
  remote = hauppauge_350
  button = Down
  repeat = 0
- config = commandir_send -e3 /home/larry/ir_codes/appletv_down
+ config = appletv down;
 end
 
 begin
@@ -48,7 +56,7 @@ begin
  remote = hauppauge_350
  button = Left
  repeat = 0
- config = commandir_send -e3 /home/larry/ir_codes/appletv_left
+ config = appletv left;
 end
 
 begin
@@ -56,14 +64,14 @@ begin
  remote = hauppauge_350
  button = Right
  repeat = 0
- config = commandir_send -e3 /home/larry/ir_codes/appletv_right
+ config = appletv right;
 end
 
 # Get back to the main menu
 begin
  prog = irexec
  remote = hauppauge_350
- button = Back/Exit
+ button = Red
  repeat = 0
  config = /usr/local/bin/from_appletv.sh
 end
