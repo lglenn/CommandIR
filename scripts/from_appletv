@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# from-appletv.sh  - Commands to switch from AppleTV to PC input.
+# from_appletv  - Commands to switch from AppleTV to PC input.
 
 # Hitting 'Menu' will stop any playing that is happening on the AppleTV. 
 # This is where a 'stop' button would be nice...

@@ -31,7 +31,7 @@
      <type>VIDEO_BROWSER</type>
      <text>Watch Apple TV</text>
      <text lang="PT">Ver Apple TV</text>
-     <action>EXEC /usr/local/bin/to_appletv.sh</action>
+     <action>EXEC /usr/local/bin/to_appletv</action>
     </button>
 
     <button>

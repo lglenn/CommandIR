@@ -309,7 +309,7 @@ begin
  remote = hauppauge_350
  button = Vol+
  repeat = 0
- config = /usr/local/bin/to_appletv.sh
+ config = /usr/local/bin/to_appletv
 end
 
 begin
@@ -317,7 +317,7 @@ begin
  remote = hauppauge_350
  button = Vol-
  repeat = 0
- config = /usr/local/bin/from_appletv.sh
+ config = /usr/local/bin/from_appletv
 end
 
 begin
