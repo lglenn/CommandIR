@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Send commands to the CommandIR IR repeater.
+# Usage: commandir_send_lirc <device> <command>
+#
+# Device is one of: hdmi_switch, appletv.
+#
+# Command is a remote command as defined in the 
+# lircd.conf file for the remote used to control 
+# device.
+
+# Port number on the CommandIR box to which the 
+# HDMI switch is connected.
+HDMI_SWITCH_EMITTER=1
+
+# Port number on the CommandIR box to which Apple 
+# TV is connected.
+APPLETV_EMITTER=3
+
+# Name (as defined in the lircd.conf file) of the 
+# Apple remote.
+APPLETV_REMOTE="Apple_A1294";
+
+# Name (as defined in the lircd.conf file) of the 
+# HDMI switch remote.
+HDMI_SWITCH_REMOTE="monoprice_hdmi_switch";
+
+# Adding some sleep time between the reception of
+# the IR signal and when the CommandIR blasts a 
+# command back out seems to make the repeater more
+# reliable. .1 seconds seems to be OK.
+SLEEPTIME=.1;
+
+command=$2;
+
+case "$1" in
+    hdmi_switch)
+	emitter=$HDMI_SWITCH_EMITTER;
+	remote=$HDMI_SWITCH_REMOTE;
+	;;
+    appletv)
+	emitter=$APPLETV_EMITTER;
+	remote=$APPLETV_REMOTE;
+	;;
+    *)
+	echo "Unknown device '$1': valid options are 'hdmi_switch', 'appletv'.";
+	;;
+esac
+
+sleep $SLEEPTIME;
+
+# See http://www.commandir.com/content/view/51/73/ for more info on the 
+# commandir lirc commands.
+irsend send_once commandir settransmitters-$emitter;
+irsend send_once $remote $command;

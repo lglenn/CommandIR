@@ -1,37 +1,36 @@
 #!/bin/bash
 
-CODES_DIR=/home/larry/ir_codes;
-SLEEPTIME=.1
+# Control script for appletv. Sends remote commands to Apple TV 
+# via LIRC and the commandir repeater. 
 
 push_button () {
-    sleep $SLEEPTIME;
-    commandir_send -e3 $CODES_DIR/appletv_$1;
+    commandir_send_lirc appletv $1;
 }
 
 case "$1" in
     play)
-	push_button "play";
+	push_button "PLAY";
 	;;
     menu)
-	push_button "menu";
+	push_button "MENU";
 	;;
     ok)
-	push_button "ok";
+	push_button "OK";
 	;;
     up)
-	push_button "up";	
+	push_button "UP";
 	;;
     down)
-	push_button "down";
+	push_button "DOWN";
 	;;
     left)
-	push_button "left";
+	push_button "LEFT";
 	;;
     right)
-	push_button "right";
+	push_button "RIGHT";
 	;;
     *)
-	echo "Unsupported command '$1'!";
+	echo "Unsupported command '$1'. Valid commands are : 'up','down','left','right','play','menu','ok'.";
 	exit 1;
 	;;
 esac;
