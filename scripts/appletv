@@ -1,8 +1,10 @@
 #!/bin/bash
 
 CODES_DIR=/home/larry/ir_codes;
+SLEEPTIME=.1
 
 push_button () {
+    sleep $SLEEPTIME;
     commandir_send -e3 $CODES_DIR/appletv_$1;
 }
 

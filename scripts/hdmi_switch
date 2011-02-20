@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Simple interface to the HDMI switch.
+
+# Where the commandir_utils ir code files live
+CODES_DIR=/home/larry/ir_codes;
+
+# Port on the commandir box to which the HDMI switch is connected.
+HDMI_SWITCH_EMITTER=1
+
+# How long to sleep before issuing the IR command. This apears to 
+# make the commandir box more stable. .1 seconds seems to work.
+SLEEPTIME=.1
+
+# Port on the HDMI switch to which the Myth box is connected. 
+MYTH_PORT=3
+
+# Port on the HDMI switch to which Apple TV is connected. 
+APPLETV_PORT=2
+
+switch_to () {
+    sleep $SLEEPTIME;
+    commandir_send -e$HDMI_SWITCH_EMITTER $CODES_DIR/hdmi_$1;
+}
+
+case "$1" in
+    appletv)
+	switch_to $APPLETV_PORT;
+	;;
+    mythtv)
+	switch_to $MYTH_PORT;
+	;;
+    *)
+	echo "Unsupported command '$1'! Valid options are: appletv, mythtv.";
+	exit 1;
+	;;
+esac;
+
+	
