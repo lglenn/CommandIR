@@ -328,3 +328,12 @@ begin
     repeat = 0
     delay = 0
 end
+
+# Get back to the main menu
+begin
+ prog = irexec
+ remote = hauppauge_350
+ button = Red
+ repeat = 0
+ config = /usr/local/bin/from_appletv
+end
