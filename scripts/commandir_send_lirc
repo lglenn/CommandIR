@@ -29,7 +29,7 @@ HDMI_SWITCH_REMOTE="monoprice_hdmi_switch";
 # the IR signal and when the CommandIR blasts a 
 # command back out seems to make the repeater more
 # reliable. .1 seconds seems to be OK.
-SLEEPTIME=.1;
+SLEEPTIME=.05;
 
 command=$2;
 
